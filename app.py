@@ -1,4 +1,4 @@
-@app.route("/info", methods=["GET"])
-def info():
-    """Menampilkan halaman informasi tambahan aplikasi."""
-    return "<h1>Halaman Informasi</h1><p>Route baru berhasil ditambahkan dan ter-deploy otomatis.</p>"
+@app.route("/fitur", methods=["GET"])
+def fitur():
+    """Menampilkan halaman fitur baru."""
+    return "<h1>Fitur Baru Berhasil Ditambahkan dan Ter-deploy!</h1>"
