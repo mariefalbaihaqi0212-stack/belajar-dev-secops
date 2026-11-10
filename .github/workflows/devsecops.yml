@@ -42,6 +42,8 @@ jobs:
                   pip install -r requirements.txt
             - name: Run Pylint Check
               run: |
+                # Cek isi direktori dulu untuk memastikan app.py terbaca oleh runner
+                  ls -la
                   python -m pylint --fail-under=9.0 app.py
 
     # ==========================================
