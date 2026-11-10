@@ -27,3 +27,4 @@ jobs:
     - name: Run Pylint Quality Gate
       run: |
         pylint kalkulator.py
+        
