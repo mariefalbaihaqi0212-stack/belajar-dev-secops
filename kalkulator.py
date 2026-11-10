@@ -14,5 +14,4 @@ def main():
     print(f"Luas persegi panjang: {hasil}")
 if __name__ == "__main__":
     main() 
-
     
