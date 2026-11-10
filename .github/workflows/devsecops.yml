@@ -41,7 +41,8 @@ jobs:
                   pip install pylint
                   pip install -r requirements.txt
             - name: Run Pylint Check
-              run: pylint --fail-under=9.0 app.py
+              run: |
+                  python -m pylint --fail-under=9.0 app.py
 
     # ==========================================
     # CD STAGE: Deploy ke VM
