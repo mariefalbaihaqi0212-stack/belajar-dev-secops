@@ -29,20 +29,20 @@ def index():
         password = request.form.get("password", "")
         conn = sqlite3.connect("users.db")
         cursor = conn.cursor()
-        
+
         # Parameterized query untuk mencegah SQL Injection
         query = "SELECT * FROM users WHERE username = ? AND password = ?"
         cursor.execute(query, (username, password))
         user = cursor.fetchone()
         conn.close()
-        
+
         if user:
             message = "Login Berhasil! Selamat datang."
             status_class = "success"
         else:
             message = "Login Gagal! Kredensial tidak valid."
             status_class = "danger"
-            
+
     return render_template(
         "index.html", message=message, status_class=status_class
     )
